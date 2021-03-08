@@ -10,5 +10,6 @@ Viel Spass!
 - *First Person Drifter* (Original von Ben Esposito, aktualisiert von Everest Pipkin)
 - *View Mirror* Shader & Script (Sokpop Collective)
 - *LookAtTarget* (Unity Technologies)
+- Rest von mir
 
-Alle mit Erlaubnis verwendet und weiter frei einsetzbar für jegliche Zwecke.
+Alle mit Erlaubnis verwendet und geteilt. Alle weiter frei einsetzbar für jegliche Zwecke.
