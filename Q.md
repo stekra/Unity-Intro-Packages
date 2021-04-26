@@ -40,9 +40,3 @@ Drei Ansätze:
 1. Bei Licht "Draw Halo" einschalten.
 2. Dem Lichtobjekt eine Kugel mit hellem Material unterordnen. (Für helles Material mit "Emission" arbeiten, evtl. mit Transparenz und/oder Texturen spielen!)
 3. Post-Processing könnte cool sein: https://docs.unity3d.com/Packages/com.unity.postprocessing@3.1/manual/index.html
-
-# IV
-
-### Ich möchte eine Mario Version machen, wo man durch klicken den Mario "nach vorne“ oder "nach hinten“ bewegen kann, damit er an Hindernisse „vorne" oder „hinten" vorbeigehen kann.
-
-Keywords: "Platformer, 2.5D". Tutorialserie: https://www.youtube.com/watch?v=eTCye7tPqhw (Eigener Character Controller, aber sehr simpel (3 Zeilen Code!) -> Gute Einführung)
