@@ -18,7 +18,7 @@ Grundsätzlich alles möglich. Für etwas relativ simples vielleicht in die [Ani
 
 ## Wie kann man kann man einen Umkreis-Trigger erstellen? (Wenn man einen Umkreis von einem Objekt betritt, dass sich die Kamera Position verändert)
 
-Einem Objekt ein Collider anhängen (z.B. Sphere Collider, Box Collider, Mesh Collider, …) und nach belieben transformieren. Beim Collider "Is Trigger" aktivieren, um es für die Physik durchlässig zu machen. Ein Skript dem Objekt anhängen. Im Skript innerhalb der `OnTriggerEnter()` Funktion gewünschtes Verhalten einfügen.
+Einem Objekt ein Collider anhängen (z.B. Sphere Collider, Box Collider, Mesh Collider, …) und nach belieben transformieren. Beim Collider "Is Trigger" aktivieren, um es für die Physik durchlässig zu machen. Ein Skript dem Objekt anhängen. Im Skript innerhalb der `OnTriggerEnter` Funktion gewünschtes Verhalten einfügen.
 
 ```c#
 OnTriggerEnter(Collider other)
@@ -31,21 +31,21 @@ OnTriggerEnter(Collider other)
 
 ## In diesem Moment würden wir gerne ein Fenster, oder ähnliches erscheinen lassen und den Spieler fragen, um welches Gebäude es sich handelt. Eine Art Antwortbox in die man hinein läuft, welche einen Screenchange oder ein zusätzliches Fenster auslöst.
 
-Unity UI's Input Field recherchieren (Sample Code unten). Das UI dann z.B. mit `ActivateDeactivate.cs` erscheinen lassen, oder mit `ChangeSceneOnTrigger.cs` in eine Szene mit nur UI wechseln.
+Unity UI's Input Field recherchieren (Sample Code unten). Das UI dann z.B. mit `ActivateDeactivate.cs` erscheinen lassen oder mit `ChangeSceneOnTrigger.cs` in eine Szene mit nur UI wechseln.
 
 ```c#
 using UnityEngine.UI
-
+```
+```c#
 public InputField inputField;
 public string solution;
 
-if (inputField.text == solution)
+void Update()
 {
-  Debug.Log("Correct!");
-}
-else
-{ 
-  Debug.Log("Nah");
+   if (inputField.text == solution)
+   {
+      Debug.Log("Correct!");
+   }
 }
 ```
 
@@ -59,19 +59,19 @@ public GameObject[] listOfObjects;
 
 void Start()
 {
-  int randomChoice = Random.Range(0, listOfObjects.Length);
+   int randomChoice = Random.Range(0, listOfObjects.Length);
 
-  for (int i = 0; i < listOfObjects.Length; i++)
-  {
-    if (i == randomChoice)
-    {
-      listOfObjects[i].SetActive(true);
-    }
-    else
-    {
-      listOfObjects[i].SetActive(false);
-    }
-  }
+   for (int i = 0; i < listOfObjects.Length; i++)
+   {
+      if (i == randomChoice)
+      {
+         listOfObjects[i].SetActive(true);
+      }
+      else
+      {
+         listOfObjects[i].SetActive(false);
+      }
+   }
 }
 ```
 
